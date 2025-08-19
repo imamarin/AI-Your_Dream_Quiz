@@ -156,7 +156,7 @@ with st.sidebar:
     materi = st.text_input("Materi", placeholder="boleh dikosongkan")
     st.markdown("---")
     default_api = st.secrets.get("GEMINI_API_KEY", os.getenv("GOOGLE_API_KEY", "")) if hasattr(st, "secrets") else os.getenv("GOOGLE_API_KEY", "")
-    api_key = st.text_input("API Key", value=default_api, type="password")
+    api_key = st.secrets.get("GEMINI_API_KEY", "")
     start = st.button("🚀 MULAI TES", type="primary", use_container_width=True)
     if start:
         if not api_key or not aspiration.strip():
