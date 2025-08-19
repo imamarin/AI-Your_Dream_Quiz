@@ -24,7 +24,7 @@ st.markdown("""
 # CSS untuk menyembunyikan logo GitHub (ikon kanan atas)
 hide_github_icon = """
     <style>
-        .stAppDeployButton {visibility: hidden;}
+        .stToolbarActions {visibility: hidden;}
     </style>
 """
 st.markdown(hide_github_icon, unsafe_allow_html=True)
