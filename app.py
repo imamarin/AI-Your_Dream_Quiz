@@ -21,6 +21,14 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+# CSS untuk menyembunyikan logo GitHub (ikon kanan atas)
+hide_github_icon = """
+    <style>
+        .stAppDeployButton {visibility: hidden;}
+    </style>
+"""
+st.markdown(hide_github_icon, unsafe_allow_html=True)
+
 SUBJECTS = [
     "Matematika",
     "IPA",
